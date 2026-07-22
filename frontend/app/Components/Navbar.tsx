@@ -144,7 +144,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            variants={menuVars}
+            variants={menuVars as any}
             initial="initial"
             animate="animate"
             exit="exit"
@@ -162,7 +162,7 @@ export default function Navbar() {
 
             {/* Staggered Links */}
             <motion.div
-              variants={linkContainerVars}
+              variants={linkContainerVars as any}
               initial="initial"
               animate="animate"
               exit="exit"
@@ -170,7 +170,7 @@ export default function Navbar() {
             >
               {NAV_LINKS.map((link) => (
                 <div key={link.label} className="overflow-hidden">
-                  <motion.div variants={linkVars}>
+                  <motion.div variants={linkVars as any}>
                     <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
