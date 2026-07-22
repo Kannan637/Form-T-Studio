@@ -15,21 +15,23 @@ const NAV_LINKS = [
 ] as const;
 
 // ---- Framer Motion Variants for the Awwwards-style Menu ----
-const menuVars = {
+const EASE = [0.76, 0, 0.24, 1] as const;
+
+const menuVars: import("framer-motion").Variants = {
   initial: {
     clipPath: "inset(0 0 0 100%)",
   },
   animate: {
     clipPath: "inset(0 0 0 0%)",
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.8, ease: EASE },
   },
   exit: {
     clipPath: "inset(0 0 0 100%)",
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
+    transition: { duration: 0.8, ease: EASE, delay: 0.3 },
   },
 };
 
-const linkContainerVars = {
+const linkContainerVars: import("framer-motion").Variants = {
   initial: {},
   animate: {
     transition: {
@@ -45,17 +47,17 @@ const linkContainerVars = {
   },
 };
 
-const linkVars = {
+const linkVars: import("framer-motion").Variants = {
   initial: { y: "100%", rotate: 2 },
   animate: {
     y: "0%",
     rotate: 0,
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.8, ease: EASE },
   },
   exit: {
     y: "100%",
     rotate: 2,
-    transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.6, ease: EASE },
   },
 };
 
@@ -144,7 +146,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            variants={menuVars as any}
+            variants={menuVars}
             initial="initial"
             animate="animate"
             exit="exit"
@@ -162,7 +164,7 @@ export default function Navbar() {
 
             {/* Staggered Links */}
             <motion.div
-              variants={linkContainerVars as any}
+              variants={linkContainerVars}
               initial="initial"
               animate="animate"
               exit="exit"
@@ -170,7 +172,7 @@ export default function Navbar() {
             >
               {NAV_LINKS.map((link) => (
                 <div key={link.label} className="overflow-hidden">
-                  <motion.div variants={linkVars as any}>
+                  <motion.div variants={linkVars}>
                     <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
