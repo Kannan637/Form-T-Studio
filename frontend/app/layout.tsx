@@ -37,7 +37,17 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${instrumentSerif.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preload" as="image" href="/Before.png" fetchPriority="high" />
+        <link rel="preload" as="image" href="/After.png" fetchPriority="high" />
+      </head>
       <body className="min-h-full flex flex-col">
+        <noscript>
+          <div style={{ padding: "2rem", textAlign: "center", background: "#f8f9fa", color: "#333", fontFamily: "sans-serif" }}>
+            <h2>JavaScript Required</h2>
+            <p>This interactive portfolio requires JavaScript to render properly. Please enable JavaScript or switch to a supported browser.</p>
+          </div>
+        </noscript>
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>

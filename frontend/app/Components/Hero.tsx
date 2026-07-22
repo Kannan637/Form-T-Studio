@@ -50,9 +50,9 @@ function useCounter(end: number, duration: number, inView: boolean) {
 /*  Stats data                                                         */
 /* ------------------------------------------------------------------ */
 const STATS = [
-    { value: 50, suffix: "+", label: "Completed Projects" },
-    { value: 5, suffix: "+", label: "Years Experience" },
-    { value: 100, suffix: "%", label: "Custom Design" },
+    { value: 50, suffix: "+", label: "Completed Projects", isDecimal: false },
+    { value: 5, suffix: "+", label: "Years Experience", isDecimal: false },
+    { value: 100, suffix: "%", label: "Custom Design", isDecimal: false },
     { value: 4.9, suffix: "★", label: "Client Satisfaction", isDecimal: true },
 ] as const;
 
@@ -159,6 +159,12 @@ export default function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
     const statsRef = useRef<HTMLDivElement>(null);
     const statsInView = useInView(statsRef, { once: true, margin: "-50px" });
+    const heroInView = useInView(sectionRef, { margin: "200px 0px 200px 0px" });
+    const heroInViewRef = useRef(false);
+    
+    useEffect(() => {
+        heroInViewRef.current = heroInView;
+    }, [heroInView]);
 
     /* Scroll-driven */
     const { scrollYProgress } = useScroll({
@@ -198,8 +204,8 @@ export default function Hero() {
 
         const resize = () => {
             const rect = container.getBoundingClientRect();
-            // Use device pixel ratio for maximum, uncompressed quality
-            const scale = typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1;
+            // Use device pixel ratio for maximum, uncompressed quality, capped at 2x
+            const scale = typeof window !== 'undefined' ? Math.min(window.devicePixelRatio || 1, 2) : 1;
             canvas.width = rect.width * scale;
             canvas.height = rect.height * scale;
             canvas.style.width = `${rect.width}px`;
@@ -209,6 +215,11 @@ export default function Hero() {
         window.addEventListener("resize", resize);
 
         const render = () => {
+            if (!heroInViewRef.current) {
+                rafRef.current = requestAnimationFrame(render);
+                return;
+            }
+
             if (imagesLoadedRef.current < 2) {
                 rafRef.current = requestAnimationFrame(render);
                 return;
@@ -424,7 +435,7 @@ export default function Hero() {
                 {/* Headline */}
                 <motion.h1
                     {...fadeUp(0.2)}
-                    className="text-5xl sm:text-7xl lg:text-hero-title font-normal tracking-tight text-center leading-[1.05] sm:leading-none max-w-[90vw] sm:max-w-[80vw] lg:max-w-[1100px]"
+                    className="font-serif text-5xl sm:text-7xl lg:text-hero-title font-normal tracking-tight text-center leading-[1.05] sm:leading-none max-w-[90vw] sm:max-w-[80vw] lg:max-w-[1100px]"
                 >
                     Thoughtfully Designed Spaces,
                     <br className="hidden sm:block" />
