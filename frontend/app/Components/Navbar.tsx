@@ -113,7 +113,7 @@ export default function Navbar() {
           {/* ---- Left Side: Logo ---- */}
           <Link href="/" className="flex items-center select-none group z-50" onClick={() => setMenuOpen(false)}>
             <img
-              src="/Logo.png"
+              src="/images/branding/formt-studio-logo.png"
               alt="Form T Studio"
               className="h-8 sm:h-10 w-auto object-contain transition-all duration-500 group-hover:scale-[1.03]"
             />

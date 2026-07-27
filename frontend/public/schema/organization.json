@@ -1,0 +1,73 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "FormT Studio",
+  "alternateName": "Form T Studio",
+  "description": "Premium interior design and architecture studio specializing in residential and commercial spaces, modular kitchens, custom furniture, and turnkey project execution.",
+  "url": "https://formt-studio.pages.dev",
+  "email": "FORMTSTUDIO@GMAIL.COM",
+  "telephone": "+916381670083",
+  "image": "https://formt-studio.pages.dev/images/branding/formt-studio-logo.png",
+  "logo": "https://formt-studio.pages.dev/images/branding/formt-studio-logo.png",
+  "founder": {
+    "@type": "Person",
+    "name": "AR Dharanika",
+    "jobTitle": "Principal Architect & Interior Designer",
+    "description": "B.Arch; INT DES (UK)"
+  },
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Dindigul",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Dindigul"
+    },
+    {
+      "@type": "City",
+      "name": "Coimbatore"
+    },
+    {
+      "@type": "City",
+      "name": "Chennai"
+    },
+    {
+      "@type": "State",
+      "name": "Tamil Nadu"
+    }
+  ],
+  "serviceType": [
+    "Interior Design",
+    "Architecture",
+    "Residential Design",
+    "Commercial Design",
+    "Modular Kitchen Design",
+    "Custom Furniture",
+    "Space Planning",
+    "3D Visualization",
+    "Turnkey Project Execution",
+    "Renovation"
+  ],
+  "knowsAbout": [
+    "Interior Design",
+    "Architecture",
+    "Residential Interiors",
+    "Commercial Interiors",
+    "Modular Kitchens",
+    "Custom Furniture",
+    "3D Visualization",
+    "Space Planning"
+  ],
+  "sameAs": []
+}

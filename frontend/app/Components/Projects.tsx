@@ -5,15 +5,15 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import BlueprintBackground from "./BlueprintBackground";
 
 const PROJECTS = [
-  { id: "01", title: "OFFICE INTERIOR - KANMANI YAMAHA", location: "DINDIGUL", img: "/1.png" },
-  { id: "02", title: "RHYTHM & RAIN, CAFE", location: "COIMBATORE", img: "/2.png" },
-  { id: "03", title: "SKY HUB, 7 SCREEN CINEMAS", location: "CHENNAI", img: "/3.png" },
-  { id: "04", title: "MR GUNA SHANMUGAM SEELAPADI", location: "DINDIGUL", img: "/4.png" },
-  { id: "05", title: "MEENAKSHI RESIDENCE, BALAKRISHAPURAM", location: "DINDIGUL", img: "/5.png" },
-  { id: "06", title: "KITCHEN INTERIOR", location: "COIMBATORE", img: "/6.png" },
-  { id: "07", title: "CO WORKING SPACE", location: "COIMBATORE", img: "/7.png" },
-  { id: "08", title: "ARIMA", location: "COIMBATORE", img: "/8.png" },
-  { id: "09", title: "RETAIL STORE", location: "COIMBATORE", img: "/9.png" },
+  { id: "01", title: "OFFICE INTERIOR - KANMANI YAMAHA", location: "DINDIGUL", img: "/images/projects/office-interior-kanmani-yamaha.png" },
+  { id: "02", title: "RHYTHM & RAIN, CAFE", location: "COIMBATORE", img: "/images/projects/rhythm-rain-cafe.png" },
+  { id: "03", title: "SKY HUB, 7 SCREEN CINEMAS", location: "CHENNAI", img: "/images/projects/sky-hub-cinemas.png" },
+  { id: "04", title: "MR GUNA SHANMUGAM SEELAPADI", location: "DINDIGUL", img: "/images/projects/guna-shanmugam-residence.png" },
+  { id: "05", title: "MEENAKSHI RESIDENCE, BALAKRISHAPURAM", location: "DINDIGUL", img: "/images/projects/meenakshi-residence.png" },
+  { id: "06", title: "KITCHEN INTERIOR", location: "COIMBATORE", img: "/images/projects/kitchen-interior.png" },
+  { id: "07", title: "CO WORKING SPACE", location: "COIMBATORE", img: "/images/projects/co-working-space.png" },
+  { id: "08", title: "ARIMA", location: "COIMBATORE", img: "/images/projects/arima.png" },
+  { id: "09", title: "RETAIL STORE", location: "COIMBATORE", img: "/images/projects/retail-store.png" },
 ];
 
 export default function Projects() {
@@ -99,7 +99,7 @@ export default function Projects() {
             style={{ opacity: bgOverlayOpacity }} 
           />
           <img 
-            src="/10.png" 
+            src="/images/projects/project-10.png" 
             alt="Hero Project" 
             className="w-full h-full object-cover"
           />

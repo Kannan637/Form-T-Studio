@@ -184,7 +184,7 @@ export default function Hero() {
                 img.onload = () => resolve(img);
                 img.src = src;
             });
-        Promise.all([loadImg("/Before.png"), loadImg("/After.png")]).then(
+        Promise.all([loadImg("/images/hero/before-renovation.png"), loadImg("/images/hero/after-renovation.png")]).then(
             ([before, after]) => {
                 beforeImgRef.current = before;
                 afterImgRef.current = after;

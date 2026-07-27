@@ -4,19 +4,19 @@ import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const images = [
-  "/1.png",
-  "/2.png",
-  "/3.png",
-  "/4.png",
-  "/5.png",
-  "/6.png",
-  "/7.png",
-  "/8.png",
-  "/9.png",
-  "/10.png",
-  "/11.png",
-  "/12.png",
-  "/13.png",
+  "/images/projects/office-interior-kanmani-yamaha.png",
+  "/images/projects/rhythm-rain-cafe.png",
+  "/images/projects/sky-hub-cinemas.png",
+  "/images/projects/guna-shanmugam-residence.png",
+  "/images/projects/meenakshi-residence.png",
+  "/images/projects/kitchen-interior.png",
+  "/images/projects/co-working-space.png",
+  "/images/projects/arima.png",
+  "/images/projects/retail-store.png",
+  "/images/projects/project-10.png",
+  "/images/projects/project-11.png",
+  "/images/projects/project-12.png",
+  "/images/projects/project-13.png",
 ];
 
 const Skiper30 = () => {

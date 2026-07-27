@@ -55,7 +55,7 @@ export default function Footer() {
               className="flex flex-col gap-8"
             >
               <div className="flex items-center gap-3">
-                <img src="/Logo.png" alt="Form T Studio Logo" className="h-10 w-auto invert" />
+                <img src="/images/branding/formt-studio-logo.png" alt="Form T Studio Logo" className="h-10 w-auto invert" />
               </div>
               <p className="text-[14px] text-white/60 max-w-[280px] leading-relaxed">
                 Premium interior design studio creating refined residential and commercial spaces. From concept to completion — precision, quality, craft.
@@ -106,7 +106,7 @@ export default function Footer() {
           >
             <div className="overflow-hidden bg-[#111] w-[160px] h-[200px]">
               <img 
-                src="/dharanika.png" 
+                src="/images/team/ar-dharanika.png" 
                 alt="AR DHARANIKA" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

@@ -9,35 +9,35 @@ const SERVICES = [
         title: "COMPLETE RESIDENTIAL & COMMERCIAL DESIGN",
         description:
             "Beautifully designed residential and commercial interiors tailored to reflect your lifestyle, functionality, and architectural vision.",
-        img: "/1.png"
+        img: "/images/projects/office-interior-kanmani-yamaha.png"
     },
     {
         id: "02",
         title: "MODULAR KITCHENS & WARDROBES",
         description:
             "Smart modular kitchens, wardrobes, storage systems, and custom cabinetry designed for maximum efficiency and elegance.",
-        img: "/2.png"
+        img: "/images/projects/rhythm-rain-cafe.png"
     },
     {
         id: "03",
         title: "CUSTOM FURNITURE & BEDROOM INTERIORS",
         description:
             "Custom-crafted furniture, entertainment units, bedroom interiors, and personalized living spaces built with premium materials.",
-        img: "/3.png"
+        img: "/images/projects/sky-hub-cinemas.png"
     },
     {
         id: "04",
         title: "SPACE PLANNING & 3D CONSULTATION",
         description:
             "Professional planning, realistic 3D visualization, concept development, and expert consultation before project execution.",
-        img: "/4.png"
+        img: "/images/projects/guna-shanmugam-residence.png"
     },
     {
         id: "05",
         title: "TURNKEY EXECUTION & MANAGEMENT",
         description:
             "Complete execution from design approval to project delivery including supervision, renovation, carpentry, electrical, and finishing.",
-        img: "/5.png"
+        img: "/images/projects/meenakshi-residence.png"
     },
 ];
 
