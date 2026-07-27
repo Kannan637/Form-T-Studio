@@ -1,8 +1,9 @@
-# Cloudflare Pages configuration
-# Static site deployment for Next.js (static export)
+# Cloudflare Workers static assets deployment
 name = "formt-studio"
-pages_build_output_dir = "frontend/out"
 compatibility_date = "2024-12-01"
+
+[assets]
+directory = "frontend/out"
 
 [build]
 command = "cd frontend && npm install && npm run build"
