@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif, IBM_Plex_Mono } from "next/font/google";
 import SmoothScrolling from "./Components/SmoothScrolling";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -50,7 +49,6 @@ export default function RootLayout({
           </div>
         </noscript>
         <SmoothScrolling>{children}</SmoothScrolling>
-        <SpeedInsights />
       </body>
     </html>
   );
