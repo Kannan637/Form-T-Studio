@@ -267,4 +267,69 @@ html {
   .text-swiss-center {
     text-align: center;
   }
+
+  .font-lexend {
+    font-family: var(--font-sans);
+  }
+}
+
+/* ─── Keyframes ─────────────────────────────────────────────────── */
+
+@keyframes ken-burns {
+  0%   { transform: scale(1)    translate(0, 0); }
+  50%  { transform: scale(1.06) translate(-1%, -0.5%); }
+  100% { transform: scale(1)    translate(0, 0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Animation Utilities ───────────────────────────────────────── */
+
+.animate-ken-burns {
+  animation: ken-burns 24s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ─── Coming Soon Page — Animations ─────────────────────────────── */
+
+@keyframes coming-soon-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes coming-soon-float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.coming-soon-animate-fade-in-up {
+  opacity: 0;
+  animation: coming-soon-fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.coming-soon-float-animation {
+  animation: coming-soon-float 6s ease-in-out infinite;
+}
+
+.coming-soon-pill-btn {
+  will-change: transform, box-shadow, background-color;
+  backface-visibility: hidden;
+}
+
+.coming-soon-pill-btn:hover {
+  box-shadow: 0 10px 40px rgba(179, 90, 43, 0.2);
 }

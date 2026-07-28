@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif, IBM_Plex_Mono } from "next/font/google";
-import SmoothScrolling from "./Components/SmoothScrolling";
+
 import "./globals.css";
 
 /* ------------------------------------------------------------------ */
@@ -167,25 +167,25 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${instrumentSerif.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <head>
-        {/* Preload branding logo — rendered immediately in the header */}
-        <link rel="preload" as="image" href="/images/branding/LOGO.png" fetchPriority="high" type="image/png" />
-
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <noscript>
           <div style={{ padding: "2rem", textAlign: "center", background: "#f8f9fa", color: "#333", fontFamily: "sans-serif" }}>
             <h2>JavaScript Required</h2>
             <p>This interactive portfolio requires JavaScript to render properly. Please enable JavaScript or switch to a supported browser.</p>
           </div>
         </noscript>
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <div id="app-wrapper" className="flex flex-col flex-1">
+          {children}
+        </div>
       </body>
     </html>
   );
