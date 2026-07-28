@@ -35,8 +35,8 @@ const SITE_NAME = "FormT Studio";
 /* ------------------------------------------------------------------ */
 export const metadata: Metadata = {
   title: {
-    default: "FormT Studio — Premium Architecture & Interior Design",
-    template: "%s | FormT Studio",
+    default: "formtstudio",
+    template: "%s | formtstudio",
   },
   description:
     "Premium interior design and architecture studio in Dindigul & Coimbatore. Specializing in residential interiors, commercial design, modular kitchens, custom furniture, and turnkey project execution.",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "Premium interior design and architecture studio specializing in residential and commercial spaces. From concept to completion — precision, quality, craft.",
     images: [
       {
-        url: "/images/branding/formt-studio-logo.png",
+        url: "/images/branding/Browser-tab-icon.png",
         width: 512,
         height: 512,
         alt: "FormT Studio Logo",
@@ -96,14 +96,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-  },
+  // icons intentionally omitted — Next.js auto-generates <link rel="icon"> from app/icon.png
+  // and <link rel="apple-touch-icon"> from app/apple-icon.png (file convention).
   manifest: "/manifest.webmanifest",
 };
 
@@ -175,9 +169,8 @@ export default function RootLayout({
       className={`${inter.variable} ${instrumentSerif.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <head>
-        {/* Preload critical hero images */}
-        <link rel="preload" as="image" href="/images/hero/before-renovation.png" fetchPriority="high" />
-        <link rel="preload" as="image" href="/images/hero/after-renovation.png" fetchPriority="high" />
+        {/* Preload branding logo — rendered immediately in the header */}
+        <link rel="preload" as="image" href="/images/branding/LOGO.png" fetchPriority="high" type="image/png" />
 
         {/* JSON-LD Structured Data */}
         <script
