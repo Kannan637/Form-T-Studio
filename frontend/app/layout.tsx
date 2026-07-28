@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif, IBM_Plex_Mono } from "next/font/google";
+import { Instrument_Serif, IBM_Plex_Mono } from "next/font/google";
 
 import "./globals.css";
 
 /* ------------------------------------------------------------------ */
 /*  Fonts                                                              */
 /* ------------------------------------------------------------------ */
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
+
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-serif",
@@ -166,7 +163,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${instrumentSerif.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      className={`${instrumentSerif.variable} ${ibmPlexMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
